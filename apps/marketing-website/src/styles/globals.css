@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* ─── Tailwind v4 Theme Tokens ───────────────────────────────────────── */
+@theme {
+  /* Colors */
+  --color-brand-blue: #1565FF;
+  --color-brand-blue-dark: #0D47CC;
+  --color-brand-blue-light: #E8EEFF;
+  --color-brand-green: #22C55E;
+  --color-brand-green-dark: #16A34A;
+  --color-brand-green-light: #DCFCE7;
+  --color-brand-purple: #A855F7;
+  --color-brand-purple-dark: #9333EA;
+  --color-brand-purple-light: #F3E8FF;
+  --color-bg-light: #F8FAFC;
+  --color-bg-white: #FFFFFF;
+  --color-bg-muted: #F1F5F9;
+  --color-text-dark: #0F172A;
+  --color-text-muted: #64748B;
+  --color-text-light: #94A3B8;
+  --color-border: #E5E7EB;
+  --color-border-light: #F3F4F6;
+
+  /* Fonts */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.05), 0 4px 20px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.08), 0 12px 40px rgba(0,0,0,0.1);
+  --shadow-glass: 0 8px 32px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+  --shadow-glow: 0 0 30px rgba(21,101,255,0.2);
+  --shadow-glow-green: 0 0 30px rgba(34,197,94,0.2);
+  --shadow-nav: 0 1px 0 rgba(0,0,0,0.06), 0 4px 24px rgba(0,0,0,0.04);
+
+  /* Width / Sizing */
+  --width-container: 1280px;
+  --width-container-sm: 1024px;
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-default: 250ms;
+  --duration-slow: 400ms;
+  --ease-default: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ─── CSS Custom Properties ─────────────────────────────────────────── */
+:root {
+  --brand-blue: #1565FF;
+  --brand-green: #22C55E;
+  --brand-purple: #A855F7;
+  --text-dark: #0F172A;
+  --text-muted: #64748B;
+  --border: #E5E7EB;
+  --transition: 250ms ease;
+}
+
+/* ─── Base Reset ────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+a {
+  transition: color var(--duration-default) ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Keyboard focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-light); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-text-light); }
+
+/* ─── Typography Classes ────────────────────────────────────────────── */
+.text-display {
+  font-family: var(--font-heading);
+  font-size: 3.75rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.text-hero {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.text-h1 {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.text-h2 {
+  font-family: var(--font-heading);
+  font-size: 1.875rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.text-h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.text-h4 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+.text-body-lg {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+.text-body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.text-caption {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.text-xs-label {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ─── Layout Utilities ──────────────────────────────────────────────── */
+.container-main {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-main { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .container-main { padding-left: 2rem; padding-right: 2rem; }
+}
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  .section-padding { padding-top: 5rem; padding-bottom: 5rem; }
+}
+@media (min-width: 1024px) {
+  .section-padding { padding-top: 6rem; padding-bottom: 6rem; }
+}
+
+.section-padding-sm {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .section-padding-sm { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+}
+
+/* ─── Glass morphism ────────────────────────────────────────────────── */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.glass-dark {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ─── Gradient Utilities ────────────────────────────────────────────── */
+.gradient-blue {
+  background: linear-gradient(135deg, #1565FF 0%, #4F87FF 100%);
+}
+.gradient-green {
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+}
+.gradient-purple {
+  background: linear-gradient(135deg, #A855F7 0%, #7C3AED 100%);
+}
+.gradient-hero {
+  background: linear-gradient(135deg, #EEF4FF 0%, #F5F0FF 50%, #EDFFF5 100%);
+}
+
+/* ─── Skeleton shimmer ──────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+/* ─── Keyframe Animations ───────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.animate-fade-up   { animation: fadeUp 0.5s var(--ease-default) forwards; }
+.animate-fade-in   { animation: fadeIn 0.4s ease-out forwards; }
+.animate-slide-in  { animation: slideIn 0.35s ease-out forwards; }
+.animate-pulse-soft { animation: pulseSoft 2s ease-in-out infinite; }
+.animate-shimmer   { animation: shimmer 1.5s infinite; }

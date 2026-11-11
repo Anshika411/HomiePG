@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <!-- Background -->
+  <rect width="48" height="48" rx="12" fill="#1565FF"/>
+  <!-- House shape -->
+  <path d="M24 10L38 22V38H10V22L24 10Z" fill="white" opacity="0.15"/>
+  <!-- Door -->
+  <rect x="20" y="28" width="8" height="10" rx="1.5" fill="white"/>
+  <!-- Roof outline -->
+  <path d="M24 10L38 22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M24 10L10 22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Base -->
+  <path d="M10 22H38" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Letter PG -->
+  <text x="24" y="26" font-family="sans-serif" font-size="9" font-weight="700" fill="white" text-anchor="middle" opacity="0.9">PG</text>
+</svg>

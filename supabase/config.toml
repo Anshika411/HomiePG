@@ -1,0 +1,30 @@
+project_id = "homiepg"
+
+[api]
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+
+[studio]
+port = 54323
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+additional_redirect_urls = [
+  "http://localhost:3000/auth/callback",
+  "exp://127.0.0.1:19000",
+  "exp://localhost:19000",
+  "homiepg://"
+]
+jwt_expiry = 3600
+enable_signup = true
+# double_confirm_signup = false
+
+[storage]
+enabled = true

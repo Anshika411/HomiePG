@@ -1,0 +1,19 @@
+{
+  "name": "homiepg-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev -w homiepg-backend",
+    "dev:marketing": "npm run dev -w marketing-website",
+    "dev:admin": "npm run dev -w admin-website",
+    "tunnel:tenant": "npm run tunnel -w tenant-app -- -c",
+    "tunnel:owner": "npm run tunnel -w owner-app -- -c"
+  },
+  "dependencies": {
+    "react-native-safe-area-context": "~5.6.0"
+  }
+}
