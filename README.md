@@ -261,3 +261,14 @@ When running in local development or after seeding test data (`npm run seed -w h
 3. Commit with semantic messages (e.g. `feat: ...`, `fix: ...`).
 4. Push and create a Pull Request to `contribution` or `main`.
 
+## 🚀 Live Demo
+
+| Application | Link |
+|---|---|
+| Marketing Website | [HomiePG Website](https://homiepg-website.vercel.app) |
+| Admin Dashboard | Add your deployed admin URL here |
+| Backend API | [HomiePG Backend](https://homiepg-backend.vercel.app) |
+
+**Backend Health Check:** [Check API Status](https://homiepg-backend.vercel.app/api/health)
+
+**Deployment Platform:** Vercel
