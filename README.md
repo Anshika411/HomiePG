@@ -263,12 +263,9 @@ When running in local development or after seeding test data (`npm run seed -w h
 
 ## 🚀 Live Demo
 
-| Application | Link |
-|---|---|
-| Marketing Website | [HomiePG Website](https://homiepg-website.vercel.app) |
-| Admin Dashboard | Add your deployed admin URL here |
-| Backend API | [HomiePG Backend](https://homiepg-backend.vercel.app) |
-
-**Backend Health Check:** [Check API Status](https://homiepg-backend.vercel.app/api/health)
+- 🌐 **Marketing Website:** https://homiepg-website.vercel.app/
+- 🛠️ **Admin Dashboard:** https://homie-pg-admin-website.vercel.app/
+- ⚙️ **Backend API:** https://homiepg-backend.vercel.app/
+- 💚 **Backend Health:** https://homiepg-backend.vercel.app/api/health
 
 **Deployment Platform:** Vercel
